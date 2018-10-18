@@ -7,6 +7,7 @@ struct WorldMapController: RouteCollection {
         worldMapRoute.post(use: createHandler)
         worldMapRoute.get(use: getAllHander)
         router.get("api", "worldmap", "search", use: searchHandler)
+        worldMapRoute.delete(WorldMap.parameter, use: deleteHandler)
     }
     
     func createHandler(_ req: Request) throws -> Future<WorldMap> {
@@ -31,6 +32,11 @@ struct WorldMapController: RouteCollection {
         }
         
         return WorldMap.query(on: req).filter(\.longitude <= longitude+0.01).filter(\.longitude >= longitude-0.01).filter(\.latitude <= latitude+0.01).filter(\.latitude >= latitude-0.01).all()
+    }
+    
+    func deleteHandler(_ req: Request) throws -> Future<HTTPStatus> {
+        let worldmap = try req.parameters.next(WorldMap.self)
+        return worldmap.delete(on: req).transform(to: .noContent)
     }
 }
 
