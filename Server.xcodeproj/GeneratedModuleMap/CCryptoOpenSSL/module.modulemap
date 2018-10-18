@@ -1,0 +1,4 @@
+module CCryptoOpenSSL {
+    umbrella "/Users/aeisses/PTOn/HowDoesALightHouseLookHereServer/.build/checkouts/crypto.git-6769061008009222702/Sources/CCryptoOpenSSL/include"
+    export *
+}

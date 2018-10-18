@@ -1,0 +1,4 @@
+module CNIOOpenSSL {
+    umbrella "/Users/aeisses/PTOn/HowDoesALightHouseLookHereServer/.build/checkouts/swift-nio-ssl.git--9183842073808920243/Sources/CNIOOpenSSL/include"
+    export *
+}

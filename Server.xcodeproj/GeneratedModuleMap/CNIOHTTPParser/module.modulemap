@@ -1,0 +1,4 @@
+module CNIOHTTPParser {
+    umbrella "/Users/aeisses/PTOn/HowDoesALightHouseLookHereServer/.build/checkouts/swift-nio.git-6920759702248698148/Sources/CNIOHTTPParser/include"
+    export *
+}

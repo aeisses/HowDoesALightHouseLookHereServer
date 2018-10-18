@@ -1,0 +1,4 @@
+module CNIOSHA1 {
+    umbrella "/Users/aeisses/PTOn/HowDoesALightHouseLookHereServer/.build/checkouts/swift-nio.git-6920759702248698148/Sources/CNIOSHA1/include"
+    export *
+}
